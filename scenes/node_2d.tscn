@@ -1,7 +1,11 @@
-[gd_scene format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=2 format=3 uid="uid://rc4qkf4wvaq0"]
+
+[ext_resource type="Script" path="res://Systems/Player.gd" id="1_kiaph"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="Node2D" parent="."]
+position = Vector2(20, 0)
+script = ExtResource("1_kiaph")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

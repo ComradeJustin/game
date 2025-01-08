@@ -1,2 +1,4 @@
-res://node_2d.tscn
+res://Systems/MovementPhysics.gd
+res://Systems/Entitydata.gd
+res://Systems/Player.gd
 res://scenes/node_2d.tscn
