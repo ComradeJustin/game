@@ -7,7 +7,7 @@ var attack_dir: Vector2
 var is_hiding: bool
 var current_dimension: bool
 var jump_strength: float
-
+var gravity: float
 func get_current_dimension() -> String:
 	if self.current_dimension == true:
 		return "%s is in Light dimension" % self.name
@@ -30,5 +30,5 @@ func get_attack_dmg() -> float:
 	return self.attack_dmg
 func getpos() -> Vector2:
 	return self.position
-
-
+func get_world_gravity() -> float:
+	return self.gravity

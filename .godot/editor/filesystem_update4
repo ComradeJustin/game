@@ -1,3 +1,5 @@
 res://Systems/Player.gd
 res://Systems/Entitydata.gd
 res://scenes/node_2d.tscn
+res://scenes/Systems/Entitydata.gd
+res://scenes/Systems/Player.gd
