@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=3 format=3 uid="uid://rc4qkf4wvaq0"]
 
-[ext_resource type="Script" path="res://Systems/Player.gd" id="1_kiaph"]
+[ext_resource type="Script" path="res://scenes/Systems/Player.gd" id="1_kiaph"]
+[ext_resource type="Texture2D" uid="uid://bvnmno6r536ap" path="res://icon.svg" id="2_qicmx"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,3 +10,6 @@ position = Vector2(20, 0)
 script = ExtResource("1_kiaph")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_qicmx")

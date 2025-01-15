@@ -22,15 +22,12 @@ func check_hiding_status() -> bool:
 	return is_hiding
 func get_attack_dir() -> Vector2:
 	return self.attack_dir
-
 func get_health() -> float:
 	return self.hp
 func get_movement_spd() -> float:
 	return self.movement_spd
-
 func get_attack_dmg() -> float:
 	return self.attack_dmg
-
 func getpos() -> Vector2:
 	return self.position
 
