@@ -1,2 +1,2 @@
 # schoolgame
- testtesttest
+Its a school game crazy right?
