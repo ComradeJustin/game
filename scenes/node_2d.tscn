@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://rc4qkf4wvaq0"]
 
 [ext_resource type="Texture2D" uid="uid://bvnmno6r536ap" path="res://icon.svg" id="2_qicmx"]
-[ext_resource type="Script" path="res://scenes/characterreal.gd" id="3_362gy"]
+[ext_resource type="Script" path="res://scenes/Systems/Player.gd" id="3_362gy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4x127"]
 
