@@ -1,4 +1,4 @@
-extends Node
+extends CharacterBody2D
 class_name Entitydata
 var attack_dmg: float
 var hp: float
