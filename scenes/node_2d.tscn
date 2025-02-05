@@ -22,6 +22,7 @@ position = Vector2(20, 0)
 texture = ExtResource("2_qicmx")
 
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
+visible = false
 position = Vector2(0, 79)
 target_position = Vector2(0, 2)
 hit_from_inside = true

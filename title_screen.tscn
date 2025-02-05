@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg4kf4siwtmuc"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_nsa6s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1asnk"]
+font_size = 32
+
+[node name="Title Screen" type="Node2D"]
+script = ExtResource("1_nsa6s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -121.0
+offset_top = -152.0
+offset_right = 124.0
+offset_bottom = -107.0
+text = "Dimension Shift"
+label_settings = SubResource("LabelSettings_1asnk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -74.0
+offset_right = 76.0
+offset_bottom = 23.0
+text = "Press start to begin
+"
