@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1739316941
 icon.svg::CompressedTexture2D::3887975914157986987::1736291768::1739316942::1::::<><>::
 README.md::TextFile::-1::1739316863::0::1::::<><>::
@@ -9,3 +10,17 @@ node_2d.tscn::PackedScene::1199128997152752033::1739316863::0::1::::<><>::uid://
 ::res://scenes/Systems/::1739316863
 Entitydata.gd::GDScript::-1::1739316863::0::1::::Entitydata<>CharacterBody2D<>::
 Player.gd::GDScript::-1::1739316863::0::1::::<>Entitydata<>::
+=======
+::res://::1739317593
+icon.svg::CompressedTexture2D::3887975914157986987::1739315905::1739315944::1::::<><>::
+POW-2.png::CompressedTexture2D::8442596679257633375::1739317585::1739317593::1::::<><>::
+POW.png::CompressedTexture2D::8912729873302541281::1739316971::1739316971::1::::<><>::
+README.md::TextFile::-1::1739315905::0::1::::<><>::
+title_screen.gd::GDScript::-1::1739315905::0::1::::<>Node2D<>::
+title_screen.tscn::PackedScene::7640879718049697874::1739315905::0::1::::<><>::res://title_screen.gd
+::res://scenes/::1739317542
+node_2d.tscn::PackedScene::1199128997152752033::1739317542::0::1::::<><>::uid://dy8nmg3em7e14::::res://POW.png<>res://scenes/Systems/Player.gd
+::res://scenes/Systems/::1739315966
+Entitydata.gd::GDScript::-1::1739315905::0::1::::Entitydata<>CharacterBody2D<>::
+Player.gd::GDScript::-1::1739315966::0::1::::<>Entitydata<>::
+>>>>>>> Stashed changes

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=9 format=3 uid="uid://rc4qkf4wvaq0"]
 
-[ext_resource type="Texture2D" uid="uid://bvnmno6r536ap" path="res://icon.svg" id="2_qicmx"]
+[ext_resource type="Texture2D" uid="uid://dy8nmg3em7e14" path="res://POW.png" id="2_fmfcr"]
 [ext_resource type="Script" path="res://scenes/Systems/Player.gd" id="3_362gy"]
+[ext_resource type="Texture2D" uid="uid://dsjwll52eh256" path="res://POW-2.png" id="3_eg27l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4x127"]
 
@@ -13,8 +14,28 @@ size = Vector2(16.1, 15.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gm47q"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_g11l7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fmfcr")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eg27l")
+}],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
+<<<<<<< Updated upstream
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(20, 0)
 
@@ -29,14 +50,41 @@ hit_from_inside = true
 collide_with_areas = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+=======
+[node name="Platform" type="StaticBody2D" parent="."]
+>>>>>>> Stashed changes
 position = Vector2(0, 238)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
 position = Vector2(21, 42.25)
 scale = Vector2(1156, 85.5)
 mesh = SubResource("BoxMesh_4x127")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(21.5, 42)
+shape = SubResource("RectangleShape2D_ausyb")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(-1175, 588)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
+position = Vector2(21, 42.25)
+scale = Vector2(1156, 85.5)
+mesh = SubResource("BoxMesh_4x127")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(21.5, 42)
+shape = SubResource("RectangleShape2D_ausyb")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(1224, 588)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
+position = Vector2(21, 42.25)
+scale = Vector2(1156, 85.5)
+mesh = SubResource("BoxMesh_4x127")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
 position = Vector2(21.5, 42)
 shape = SubResource("RectangleShape2D_ausyb")
 
@@ -55,6 +103,7 @@ scale = Vector2(162, 155)
 mesh = SubResource("BoxMesh_gm47q")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+<<<<<<< Updated upstream
 offset = Vector2(0, -50)
 position_smoothing_enabled = true
 
@@ -69,3 +118,22 @@ mesh = SubResource("BoxMesh_4x127")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(21.5, 42)
 shape = SubResource("RectangleShape2D_ausyb")
+=======
+position_smoothing_enabled = true
+
+[node name="Weapon Animation" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(243, -1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g11l7")
+animation = &"inactive"
+
+[node name="LeftAttack" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(84, 0)
+target_position = Vector2(280, 0)
+
+[node name="RightAttack" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(-80, 0)
+scale = Vector2(-1, -1)
+target_position = Vector2(280, 0)
+>>>>>>> Stashed changes

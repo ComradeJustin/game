@@ -1,5 +1,5 @@
 extends Entitydata
-
+var attackSide = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,13 +21,29 @@ func _physics_process(delta: float) -> void:
 			self.velocity.x = input_dir * movement_spd * delta * dash_vel
 		else:
 			velocity.x = move_toward(velocity.x, 0, movement_spd)
+<<<<<<< Updated upstream
 		
 		if Input.is_action_just_pressed("Dash") and !is_on_floor():
 			self.velocity.x = input_dir * movement_spd / delta
 
+=======
+			
+		if Input.is_action_just_released("move_left"):
+			attackSide = false
+		if Input.is_action_just_released("move_right"):
+			attackSide = true
+	
+>>>>>>> Stashed changes
 		move_and_slide()
 
-
+		if Input.is_action_just_pressed("use_weapon"):
+			if attackSide == true:
+				$"Weapon Animation".position = $RightAttack.position
+			if attackSide == false:
+				$"Weapon Animation".position = $LeftAttack.position
+			$"Weapon Animation".animation = "active"
+			await get_tree().create_timer(1.0).timeout
+			$"Weapon Animation".animation = "inactive"
 # sorry justin, but I have no idea why we would need this to be a function
 #func input_reader():
 #	var input_dir = Input.get_vector("move_left", "move_right","jump","move_down") 
