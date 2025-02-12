@@ -37,6 +37,7 @@ animations = [{
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(20, 0)
 
@@ -51,6 +52,9 @@ hit_from_inside = true
 collide_with_areas = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+=======
+[node name="Platform" type="StaticBody2D" parent="."]
+>>>>>>> Stashed changes
 =======
 [node name="Platform" type="StaticBody2D" parent="."]
 >>>>>>> Stashed changes
@@ -109,6 +113,7 @@ mesh = SubResource("BoxMesh_gm47q")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 offset = Vector2(0, -50)
 position_smoothing_enabled = true
 
@@ -124,6 +129,8 @@ mesh = SubResource("BoxMesh_4x127")
 position = Vector2(21.5, 42)
 shape = SubResource("RectangleShape2D_ausyb")
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 position_smoothing_enabled = true
@@ -144,6 +151,9 @@ position = Vector2(-80, 0)
 scale = Vector2(-1, -1)
 target_position = Vector2(280, 0)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

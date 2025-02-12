@@ -23,11 +23,14 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, movement_spd)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		
 		if Input.is_action_just_pressed("Dash") and !is_on_floor():
 			self.velocity.x = input_dir * movement_spd / delta
 
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 			
