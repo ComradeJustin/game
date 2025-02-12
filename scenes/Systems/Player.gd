@@ -3,8 +3,8 @@ var attackSide = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.movement_spd = 300.0
-	self.dash_vel = 100
+	self.movement_spd = 150
+	self.dash_vel = 250
 	pass # Replace with function body.
 
 
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 			
 		var input_dir := Input.get_axis("move_left", "move_right") 
 		if input_dir:
-			self.velocity.x = input_dir * movement_spd * delta * dash_vel
+			self.velocity.x = input_dir * pow(movement_spd,2) * delta 
 		else:
 			velocity.x = move_toward(velocity.x, 0, movement_spd)
 <<<<<<< Updated upstream
@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 <<<<<<< Updated upstream
 		
 		if Input.is_action_just_pressed("Dash") and !is_on_floor():
-			self.velocity.x = input_dir * movement_spd / delta
+			self.velocity.x = input_dir * dash_vel  / delta
 
 =======
 =======
