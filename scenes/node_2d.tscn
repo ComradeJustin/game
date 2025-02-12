@@ -53,6 +53,9 @@ target_position = Vector2(0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(20, 0)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 =======
 [node name="Platform" type="StaticBody2D" parent="."]
@@ -117,6 +120,7 @@ shape = SubResource("RectangleShape2D_22lk8")
 position = Vector2(2, 0.500004)
 scale = Vector2(162, 155)
 mesh = SubResource("BoxMesh_gm47q")
+<<<<<<< HEAD
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 <<<<<<< Updated upstream
@@ -177,3 +181,5 @@ target_position = Vector2(280, 0)
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 4b6d0f3 (Dashing stuff)

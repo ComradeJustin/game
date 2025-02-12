@@ -4,7 +4,7 @@ var attackSide = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.movement_spd = 300.0
-	self.dash_vel = 100
+	# self.gravity = 9.81 * 1.0 * pow(1,2)
 	pass # Replace with function body.
 
 
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 			
 		var input_dir := Input.get_axis("move_left", "move_right") 
 		if input_dir:
-			self.velocity.x = input_dir * movement_spd * delta * dash_vel
+			self.velocity.x = input_dir * movement_spd
 		else:
 			velocity.x = move_toward(velocity.x, 0, movement_spd)
 <<<<<<< Updated upstream
@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		
+<<<<<<< HEAD
 		if Input.is_action_just_pressed("Dash") and !is_on_floor():
 			self.velocity.x = input_dir * movement_spd / delta
 
@@ -46,6 +47,9 @@ func _physics_process(delta: float) -> void:
 			attackSide = true
 	
 >>>>>>> Stashed changes
+=======
+	
+>>>>>>> parent of 4b6d0f3 (Dashing stuff)
 		move_and_slide()
 
 		if Input.is_action_just_pressed("use_weapon"):
