@@ -2,9 +2,14 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 res://scenes/Systems/Player.gd
 res://scenes/node_2d.tscn
 res://scenes/Systems/Entitydata.gd
+=======
+res://scenes/node_2d.tscn
+res://scenes/Systems/Player.gd
+>>>>>>> Stashed changes
 =======
 res://scenes/node_2d.tscn
 res://scenes/Systems/Player.gd
