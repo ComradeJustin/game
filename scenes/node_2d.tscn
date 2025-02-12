@@ -128,7 +128,7 @@ offset = Vector2(0, -50)
 position_smoothing_enabled = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(1208, 88)
+position = Vector2(1210, 88)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2"]
 position = Vector2(21, 42.25)
