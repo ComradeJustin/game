@@ -8,6 +8,7 @@ var is_hiding: bool
 var current_dimension: bool
 var jump_strength: float
 var gravity: float
+var dash_vel: float
 func get_current_dimension() -> String:
 	if self.current_dimension == true:
 		return "%s is in Light dimension" % self.name

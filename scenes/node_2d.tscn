@@ -28,9 +28,6 @@ target_position = Vector2(0, 2)
 hit_from_inside = true
 collide_with_areas = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(20, 0)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 238)
 
@@ -56,3 +53,19 @@ shape = SubResource("RectangleShape2D_22lk8")
 position = Vector2(2, 0.500004)
 scale = Vector2(162, 155)
 mesh = SubResource("BoxMesh_gm47q")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+offset = Vector2(0, -50)
+position_smoothing_enabled = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1210, 88)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2"]
+position = Vector2(21, 42.25)
+scale = Vector2(1156, 85.5)
+mesh = SubResource("BoxMesh_4x127")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(21.5, 42)
+shape = SubResource("RectangleShape2D_ausyb")
