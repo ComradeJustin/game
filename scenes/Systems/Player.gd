@@ -1,5 +1,6 @@
 extends Entitydata
-
+var DashMax = 2
+var DashAmount = DashMax
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +24,12 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, movement_spd)
 		
 		if Input.is_action_just_pressed("Dash") and !is_on_floor():
-			self.velocity.x = input_dir * movement_spd / delta
+			if DashAmount > 0:
+				self.velocity.x = input_dir * movement_spd / delta
+				DashAmount -= 1;
+				
+		if is_on_floor():
+			DashAmount = DashMax
 
 		move_and_slide()
 
