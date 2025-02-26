@@ -54,6 +54,10 @@ mesh = SubResource("BoxMesh_gm47q")
 offset = Vector2(0, -50)
 position_smoothing_enabled = true
 
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
+position = Vector2(83, 0)
+target_position = Vector2(52, 0)
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(1210, 88)
 
