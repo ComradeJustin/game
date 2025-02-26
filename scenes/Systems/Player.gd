@@ -2,12 +2,12 @@ extends Entitydata
 var DashMax = 2
 var DashAmount = DashMax
 var direction = null
-
+var dash_vel = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.movement_spd = 300.0
-	self.dash_vel = 100
+	
 	pass # Replace with function body.
 
 
