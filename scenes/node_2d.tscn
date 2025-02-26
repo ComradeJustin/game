@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=6 format=3 uid="uid://rc4qkf4wvaq0"]
 
-[ext_resource type="Texture2D" uid="uid://bvnmno6r536ap" path="res://icon.svg" id="2_qicmx"]
 [ext_resource type="Script" path="res://scenes/Systems/Player.gd" id="3_362gy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4x127"]
@@ -9,24 +8,11 @@
 size = Vector2(1157, 86)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22lk8"]
-size = Vector2(16.1, 15.5)
+size = Vector2(4.25, 15.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gm47q"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Player" type="Node2D" parent="."]
-position = Vector2(20, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("2_qicmx")
-
-[node name="RayCast2D" type="RayCast2D" parent="Player"]
-visible = false
-position = Vector2(0, 79)
-target_position = Vector2(0, 2)
-hit_from_inside = true
-collide_with_areas = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 238)
@@ -44,17 +30,27 @@ shape = SubResource("RectangleShape2D_ausyb")
 position = Vector2(20, 0)
 script = ExtResource("3_362gy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="Player Hurtbox" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(2, -4.76837e-07)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_22lk8")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+[node name="RAttack Hitbox" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(104.75, 1)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_22lk8")
+
+[node name="LAttack Hitbox" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-100, 3.55271e-15)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_22lk8")
+
+[node name="Player Mesh" type="MeshInstance2D" parent="CharacterBody2D"]
 position = Vector2(2, 0.500004)
 scale = Vector2(162, 155)
 mesh = SubResource("BoxMesh_gm47q")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Main Camera" type="Camera2D" parent="CharacterBody2D"]
 offset = Vector2(0, -50)
 position_smoothing_enabled = true
 

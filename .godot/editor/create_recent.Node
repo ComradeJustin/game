@@ -1,4 +1,6 @@
+RayCast2D
 CollisionShape2D
+MeshInstance2D
 CharacterBody2D
 Sprite2D
 Node2D
