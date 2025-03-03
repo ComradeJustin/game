@@ -52,7 +52,9 @@ mesh = SubResource("BoxMesh_gm47q")
 
 [node name="Main Camera" type="Camera2D" parent="CharacterBody2D"]
 offset = Vector2(0, -50)
+process_callback = 0
 position_smoothing_enabled = true
+position_smoothing_speed = 4.0
 
 [node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
 position = Vector2(83, 0)

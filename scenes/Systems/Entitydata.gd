@@ -33,3 +33,7 @@ func getpos() -> Vector2:
 	return self.position
 func get_world_gravity() -> float:
 	return self.gravity
+
+
+func position_round():
+	self.position = (self.position*100).round()/100
