@@ -33,10 +33,9 @@ func _physics_process(delta: float) -> void:
 
 		#Use weapon
 	if Input.is_action_just_pressed("use_weapon"):
-		if self.attack_dir < Vector2(0,0):
-			print("left")
-		elif self.attack_dir > Vector2(0,0):
-			print("right")
+		print("WIP")
+		attack_dir = get_local_mouse_position()
+		$"Attack hitbox".rotation = attack_dir
 
 
 	
@@ -45,4 +44,3 @@ func _physics_process(delta: float) -> void:
 			self.velocity.x = input_dir * dash_vel / delta * self.movement_spd;
 			DashAmount -= 1;
 				
-

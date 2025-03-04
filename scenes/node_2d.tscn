@@ -35,16 +35,6 @@ position = Vector2(2, -4.76837e-07)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_22lk8")
 
-[node name="RAttack Hitbox" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(104.75, 1)
-scale = Vector2(10, 10)
-shape = SubResource("RectangleShape2D_22lk8")
-
-[node name="LAttack Hitbox" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-100, 3.55271e-15)
-scale = Vector2(10, 10)
-shape = SubResource("RectangleShape2D_22lk8")
-
 [node name="Player Mesh" type="MeshInstance2D" parent="CharacterBody2D"]
 position = Vector2(2, 0.500004)
 scale = Vector2(162, 155)
@@ -56,9 +46,8 @@ process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
-[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
-position = Vector2(83, 0)
-target_position = Vector2(52, 0)
+[node name="Attack hitbox" type="RayCast2D" parent="CharacterBody2D"]
+target_position = Vector2(147, 0)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(1210, 88)
