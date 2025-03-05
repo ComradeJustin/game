@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=7 format=3 uid="uid://rc4qkf4wvaq0"]
 
 [ext_resource type="Script" path="res://scenes/Systems/Player.gd" id="3_362gy"]
 
@@ -8,9 +8,11 @@
 size = Vector2(1157, 86)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22lk8"]
-size = Vector2(4.25, 15.5)
+size = Vector2(16.1, 15.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gm47q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7vsac"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,7 +33,7 @@ position = Vector2(20, 0)
 script = ExtResource("3_362gy")
 
 [node name="Player Hurtbox" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(2, -4.76837e-07)
+position = Vector2(1.5, -4.76837e-07)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_22lk8")
 
@@ -48,6 +50,11 @@ position_smoothing_speed = 4.0
 
 [node name="Attack hitbox" type="RayCast2D" parent="CharacterBody2D"]
 target_position = Vector2(147, 0)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D/Attack hitbox"]
+position = Vector2(51.25, -1)
+scale = Vector2(243.5, -1)
+mesh = SubResource("BoxMesh_7vsac")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(1210, 88)

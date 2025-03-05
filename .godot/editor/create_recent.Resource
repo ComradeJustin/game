@@ -1,0 +1,2 @@
+Resource
+CapsuleShape2D

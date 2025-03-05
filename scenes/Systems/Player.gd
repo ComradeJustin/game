@@ -13,34 +13,41 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	move_and_slide()
-
-
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = -400.0 * 1.5
 	input_dir = Input.get_axis("move_left", "move_right") 
-
-			
-			
-		
+	move_and_slide()
 	self.velocity.x = input_dir * movement_spd / delta
+	rotate_attack()
+	movement(delta)
+	
+			
+		
+	
 
 		
-	if !is_on_floor():
-		velocity += get_gravity() * delta
-	elif is_on_floor():
-			DashAmount = DashMax		
+	
 
 		#Use weapon
-	if Input.is_action_just_pressed("use_weapon"):
-		print("WIP")
-		attack_dir = get_local_mouse_position()
-		$"Attack hitbox".rotation = attack_dir
+	#if Input.is_action_just_pressed("use_weapon"):
+		#inser attack stuff
 
 
 	
+	
+func rotate_attack():
+	var mouse_position = get_global_mouse_position()
+	var angle = get_angle(self.position,mouse_position)
+	$"Attack hitbox".rotation = angle
+
+
+func movement(delta:float):
+	position_round()
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = -400.0 * 1.5
+	if !is_on_floor():
+		velocity += get_gravity() * delta
+	elif is_on_floor():
+			DashAmount = DashMax
 	if Input.is_action_just_pressed("Dash") and !is_on_floor():
 		if DashAmount > 0:
-			self.velocity.x = input_dir * dash_vel / delta * self.movement_spd;
+			self.velocity.x = (input_dir * dash_vel / delta * self.movement_spd);
 			DashAmount -= 1;
-				

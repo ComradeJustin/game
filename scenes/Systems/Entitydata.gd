@@ -11,7 +11,7 @@ var gravity: float
 var dash_vel: float
 func get_current_dimension() -> String:
 	if self.current_dimension == true:
-		return "%s is in Light dimension" % self.name
+		return "%s is in Light dimenssion" % self.name
 	if self.current_dimension == false:
 		return "%s is in Dark dimension" % self.name
 	else:
@@ -37,3 +37,7 @@ func get_world_gravity() -> float:
 
 func position_round():
 	self.position = (self.position*100).round()/100
+func get_angle(current:Vector2,target:Vector2):
+	var y = current.y - target.y
+	var x = current.x - target.x
+	return atan2(-y,-x)

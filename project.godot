@@ -15,6 +15,10 @@ run/main_scene="res://scenes/node_2d.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [input]
 
 move_right={
