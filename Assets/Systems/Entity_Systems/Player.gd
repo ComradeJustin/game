@@ -37,6 +37,8 @@ func movement(delta:float):
 	input_dir = Input.get_axis("move_left", "move_right") 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -400.0 * 1.5
+	if !is_on_floor():
+		velocity += get_gravity() * delta
 	self.velocity.x = input_dir * movement_spd / delta
 	dash(delta)
 	position_round()
@@ -62,9 +64,7 @@ func acceleration_system():
 
 #Allows for dashing to be called
 func dash(delta:float):
-	if !is_on_floor():
-		velocity += get_gravity() * delta
-	elif is_on_floor():
+	if is_on_floor():
 			dash_count[0] = dash_count[1]
 	if Input.is_action_just_pressed("Dash") && dash_count[0] > 0 && !is_on_floor():
 		self.acceleration = (input_dir * dash_vel / delta * self.movement_spd);
