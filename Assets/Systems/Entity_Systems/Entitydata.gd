@@ -7,7 +7,6 @@ var attack_dir: Vector2
 var is_hiding: bool
 var current_dimension: bool
 var jump_strength: float
-var gravity: float
 var dash_vel: float
 
 

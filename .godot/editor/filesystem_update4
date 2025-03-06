@@ -1,16 +1,2 @@
-res://scenes/node_2d.tscn
-res://new_resource.tres
-res://title_screen.tscn
-res://scenes/title_screen.tscn
-res://Assets/Characters/player.tscn
-res://Assets/Characters/character_body_2d.tscn
-res://test_scenes/node_2d.tscn
-res://Assets/World/Characters/player.tscn
 res://Assets/Systems/Entity_Systems/Player.gd
-res://test_scenes/test_platform.tscn
-res://debug_objects/test_scenes/node_2d.tscn
-res://debug_objects/test_objects/test_platform.tscn
-res://scenes/Non_Game_Scenes/title_screen.tscn
 res://Assets/debug_objects/test_scenes/node_2d.tscn
-res://Assets/debug_objects/test_objects/test_platform.tscn
-res://Assets/Systems/Entity_Systems/Entitydata.gd

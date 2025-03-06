@@ -49,11 +49,16 @@ func acceleration_system():
 	if abs(self.acceleration) > 0 && !(abs(self.acceleration) - self.friction < 0): 
 		friction = -self.acceleration/pow(abs(self.acceleration),0.4)
 		self.acceleration += self.friction
-		self.velocity.x += self.acceleration
+		self.velocity.x += lerp(self.velocity.x,self.acceleration,0.6)
 		self.acceleration = roundf(self.acceleration * 100)/100
 		print(self.acceleration)
 	else:
 		self.acceleration = 0
+
+
+
+
+
 
 #Allows for dashing to be called
 func dash(delta:float):
@@ -61,10 +66,9 @@ func dash(delta:float):
 		velocity += get_gravity() * delta
 	elif is_on_floor():
 			dash_count[0] = dash_count[1]
-	if Input.is_action_just_pressed("Dash") and !is_on_floor():
-		if dash_count[0] > 0:
-			self.acceleration = (input_dir * dash_vel / delta * self.movement_spd);
-			print(self.acceleration)
-			dash_count[0] -= 1;
-
+	if Input.is_action_just_pressed("Dash") && dash_count[0] > 0 && !is_on_floor():
+		self.acceleration = (input_dir * dash_vel / delta * self.movement_spd);
+		print(self.acceleration)
+		dash_count[0] -= 1;
+	
 	
