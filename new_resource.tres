@@ -1,4 +1,0 @@
-[gd_resource type="Resource" format=3 uid="uid://hco2055fiado"]
-
-[resource]
-metadata/test = NodePath(".")

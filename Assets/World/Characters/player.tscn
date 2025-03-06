@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnm01ac5ujabo"]
+
+[ext_resource type="Script" uid="uid://dgjsy304bk2ed" path="res://Assets/Systems/Entity_Systems/Player.gd" id="1_to4ma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xerrp"]
+size = Vector2(16.1, 15.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_03hor"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nvj12"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_to4ma")
+
+[node name="Player Hurtbox" type="CollisionShape2D" parent="."]
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_xerrp")
+
+[node name="Player Mesh" type="MeshInstance2D" parent="."]
+position = Vector2(0, 0.5)
+scale = Vector2(162, 155)
+mesh = SubResource("BoxMesh_03hor")
+
+[node name="Main Camera" type="Camera2D" parent="."]
+offset = Vector2(0, -50)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+
+[node name="Attack hitbox" type="RayCast2D" parent="."]
+target_position = Vector2(150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Attack hitbox"]
+scale = Vector2(140, 5)
+texture = SubResource("PlaceholderTexture2D_nvj12")
+centered = false
+offset = Vector2(0, -0.5)

@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://rc4qkf4wvaq0"]
+
+[ext_resource type="PackedScene" uid="uid://cnm01ac5ujabo" path="res://Assets/World/Characters/player.tscn" id="1_rikso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pumv3"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rmrl6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_rikso")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(90, 2.137)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.177778, 88.9097)
+scale = Vector2(0.613367, 1.28617)
+shape = SubResource("RectangleShape2D_pumv3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_rmrl6")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+scale = Vector2(90, 2.137)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(15.3111, 24.8011)
+scale = Vector2(0.866222, 1.58025)
+shape = SubResource("RectangleShape2D_pumv3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_rmrl6")

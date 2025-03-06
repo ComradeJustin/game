@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dg4kf4siwtmuc"]
 
-[ext_resource type="Script" path="res://title_screen.gd" id="1_nsa6s"]
+[ext_resource type="Script" uid="uid://cuseig81aky7c" path="res://Assets/Systems/Game_Systems/title_screen.gd" id="1_fgkus"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1asnk"]
 font_size = 32
 
 [node name="Title Screen" type="Node2D"]
-script = ExtResource("1_nsa6s")
+script = ExtResource("1_fgkus")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
