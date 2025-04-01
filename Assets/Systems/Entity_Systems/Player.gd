@@ -1,14 +1,13 @@
 extends Entitydata
 var dash_count:Array
 var input_dir:float
-var friction:float
-var acceleration: float
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.movement_spd = 8
-	self.dash_vel = 5
+	self.dash_vel = 4
 	self.friction = 0
 	dash_count = [0,2]
 	pass # Replace with function body.
@@ -40,35 +39,25 @@ func movement(delta:float):
 	if !is_on_floor():
 		velocity += get_gravity() * delta
 	self.velocity.x = input_dir * movement_spd / delta
-	dash(delta)
 	position_round()
+	dash_input_check(delta)
 	acceleration_system()
 	move_and_slide()
 
 
-#Causes acceleration to function
-func acceleration_system():
-	if abs(self.acceleration) > 0 && !(abs(self.acceleration) - self.friction < 0): 
-		friction = -self.acceleration/pow(abs(self.acceleration),0.4)
-		self.acceleration += self.friction
-		self.velocity.x += lerp(self.velocity.x,self.acceleration,0.6)
-		self.acceleration = roundf(self.acceleration * 100)/100
-		print(self.acceleration)
-	else:
-		self.acceleration = 0
 
 
 
 
-
-
-#Allows for dashing to be called
-func dash(delta:float):
+func dash_input_check(delta:float):
 	if is_on_floor():
 			dash_count[0] = dash_count[1]
 	if Input.is_action_just_pressed("Dash") && dash_count[0] > 0 && !is_on_floor():
-		self.acceleration = (input_dir * dash_vel / delta * self.movement_spd);
-		print(self.acceleration)
-		dash_count[0] -= 1;
+			dash(delta,input_dir)
+			dash_count[0] -= 1;
+
+
+
+	
 	
 	

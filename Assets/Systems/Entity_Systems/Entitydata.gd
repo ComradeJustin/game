@@ -8,7 +8,8 @@ var is_hiding: bool
 var current_dimension: bool
 var jump_strength: float
 var dash_vel: float
-
+var friction:float
+var acceleration: float
 
 
 func get_current_dimension() -> String:
@@ -46,3 +47,18 @@ func get_angle(current:Vector2,target:Vector2):
 	var x = current.x - target.x
 	return atan2(-y,-x)
 
+#Causes acceleration to function
+func acceleration_system():
+	if abs(self.acceleration) > 0 && !(abs(self.acceleration) - self.friction < 0): 
+		friction = -self.acceleration/pow(abs(self.acceleration),0.4)
+		self.acceleration += self.friction
+		self.velocity.x += lerp(self.velocity.x,self.acceleration,0.6)
+		self.acceleration = roundf(self.acceleration * 100)/100
+		print(self.acceleration)
+	else:
+		self.acceleration = 0
+
+
+#Allows for dashing to be called
+func dash(delta:float, input_dir:float):
+	self.acceleration = (input_dir * dash_vel/ delta * self.movement_spd);
