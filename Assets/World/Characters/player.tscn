@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddlbsxipe0lbe" path="res://epic winner image.webp" id="2_mf0c4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xerrp"]
-size = Vector2(16.1, 15.5)
+size = Vector2(8.6, 15.7)
 
 [sub_resource type="BoxMesh" id="BoxMesh_03hor"]
 
@@ -25,10 +25,12 @@ animations = [{
 script = ExtResource("1_to4ma")
 
 [node name="Player Hurtbox" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 3.5)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_xerrp")
 
 [node name="Player Mesh" type="MeshInstance2D" parent="."]
+visible = false
 position = Vector2(0, 0.5)
 scale = Vector2(162, 155)
 mesh = SubResource("BoxMesh_03hor")

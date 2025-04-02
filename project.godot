@@ -17,6 +17,9 @@ config/icon="res://Assets/Sprites/Static_Sprites/Icons/icon.svg"
 
 [display]
 
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
 
 [input]
