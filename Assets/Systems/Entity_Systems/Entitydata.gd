@@ -62,3 +62,5 @@ func acceleration_system():
 #Allows for dashing to be called
 func dash(delta:float, input_dir:float):
 	self.acceleration = (input_dir * dash_vel/ delta * self.movement_spd);
+
+

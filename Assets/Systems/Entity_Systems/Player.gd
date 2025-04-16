@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 	rotate_attack()
 	movement(delta)
 	
+	
 			
 #func Use weapon
 	#if Input.is_action_just_pressed("use_weapon"):
@@ -60,4 +61,4 @@ func dash_input_check(delta:float):
 
 	
 	
-	
+

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnm01ac5ujabo"]
+[gd_scene load_steps=8 format=3 uid="uid://cnm01ac5ujabo"]
 
 [ext_resource type="Script" uid="uid://dgjsy304bk2ed" path="res://Assets/Systems/Entity_Systems/Player.gd" id="1_to4ma"]
 [ext_resource type="Texture2D" uid="uid://ddlbsxipe0lbe" path="res://epic winner image.webp" id="2_mf0c4"]
+[ext_resource type="Script" uid="uid://c3tqtotaoh50e" path="res://Assets/World/Characters/main_camera.gd" id="2_vq4au"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xerrp"]
 size = Vector2(8.6, 15.7)
@@ -40,6 +41,7 @@ offset = Vector2(0, -50)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
+script = ExtResource("2_vq4au")
 
 [node name="Attack hitbox" type="RayCast2D" parent="."]
 target_position = Vector2(150, 0)
