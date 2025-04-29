@@ -70,3 +70,5 @@ Pause={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/decals/filter=4
+textures/light_projectors/filter=4

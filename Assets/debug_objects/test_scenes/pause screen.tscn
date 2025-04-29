@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c16opqa5yprwr"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8r4o7"]
+[gd_scene format=3 uid="uid://c16opqa5yprwr"]
 
 [node name="Control" type="Control"]
 z_index = 1
@@ -12,7 +10,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_8r4o7")
 layout_mode = 0
 offset_left = -12.0
 offset_top = -6.0

@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8p2xnc6lbpow"]
+
+[ext_resource type="PackedScene" uid="uid://c16opqa5yprwr" path="res://Assets/debug_objects/test_scenes/pause screen.tscn" id="1_p07f7"]
+[ext_resource type="Texture2D" uid="uid://2smqvj8mgsgm" path="res://Assets/Sprites/Static_Sprites/Icons/Heart.png" id="2_ljx8l"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_8j2gr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6jl1f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ljx8l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ui" type="CanvasLayer"]
+
+[node name="Pause" parent="." instance=ExtResource("1_p07f7")]
+visible = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.566283, 0.65613)
+texture = SubResource("ImageTexture_8j2gr")
+stretch_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/TextureRect"]
+texture_filter = 5
+position = Vector2(81.2314, 62.4876)
+scale = Vector2(4, 3.116)
+sprite_frames = SubResource("SpriteFrames_6jl1f")
