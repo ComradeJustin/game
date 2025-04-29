@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=6 format=3 uid="uid://rc4qkf4wvaq0"]
 
 [ext_resource type="PackedScene" uid="uid://cnm01ac5ujabo" path="res://Assets/World/Characters/player.tscn" id="1_rikso"]
 [ext_resource type="Script" uid="uid://dxunc0w0oq4dj" path="res://Assets/Systems/Game_Systems/global_script.gd" id="1_rmrl6"]
+[ext_resource type="PackedScene" uid="uid://c16opqa5yprwr" path="res://Assets/debug_objects/test_scenes/pause screen.tscn" id="3_gs7pm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pumv3"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rmrl6"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(1, 1)
 script = ExtResource("1_rmrl6")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_rikso")]
@@ -37,3 +39,8 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D"]
 scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_rmrl6")
+
+[node name="Ui" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="Ui" instance=ExtResource("3_gs7pm")]
+visible = false

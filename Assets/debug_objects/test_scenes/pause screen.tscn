@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c16opqa5yprwr"]
+[gd_scene load_steps=2 format=3 uid="uid://c16opqa5yprwr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8r4o7"]
 
 [node name="Control" type="Control"]
 z_index = 1
@@ -8,6 +10,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8r4o7")
+layout_mode = 0
+offset_left = -12.0
+offset_top = -6.0
+offset_right = 1153.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 0.196078)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
