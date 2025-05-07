@@ -1,6 +1,7 @@
 extends Entitydata
 var dash_count:Array
 var input_dir:float
+@onready var attack_hitbox = $"Attack hitbox"
 
 
 
@@ -16,6 +17,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	rotate_attack()
+	if Input.is_action_just_pressed("Attack"):
+		attack()
 	movement(delta)
 	
 	
@@ -46,7 +49,9 @@ func movement(delta:float):
 	move_and_slide()
 
 
-
+func attack():
+	attack_hitbox.check_enemy(attack_dmg)
+	print('attack')
 
 
 
@@ -61,4 +66,3 @@ func dash_input_check(delta:float):
 
 	
 	
-

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Entitydata
 var attack_dmg: float
-var hp: float
+@export var hp: float
 var movement_spd: float
 var attack_dir: Vector2
 var is_hiding: bool
@@ -58,9 +58,14 @@ func acceleration_system():
 	else:
 		self.acceleration = 0
 
+func check_death():
+	if self.hp <= 0:
+		self.queue_free()
+		
+func damage(damage: float):
+	self.hp -= damage
+	check_death()
 
 #Allows for dashing to be called
 func dash(delta:float, input_dir:float):
 	self.acceleration = (input_dir * dash_vel/ delta * self.movement_spd);
-
-

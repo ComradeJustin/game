@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://rc4qkf4wvaq0"]
+[gd_scene load_steps=7 format=3 uid="uid://rc4qkf4wvaq0"]
 
 [ext_resource type="PackedScene" uid="uid://cnm01ac5ujabo" path="res://Assets/World/Characters/player.tscn" id="1_rikso"]
 [ext_resource type="Script" uid="uid://dxunc0w0oq4dj" path="res://Assets/Systems/Game_Systems/global_script.gd" id="1_rmrl6"]
 [ext_resource type="PackedScene" uid="uid://b8p2xnc6lbpow" path="res://scenes/Non_Game_Scenes/Ui.tscn" id="3_gs7pm"]
+[ext_resource type="PackedScene" uid="uid://dce0pdo3qco0t" path="res://Assets/World/Characters/Enemy.tscn" id="4_ciie0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pumv3"]
 
@@ -12,7 +13,7 @@
 position = Vector2(1, 1)
 script = ExtResource("1_rmrl6")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_rikso")]
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("1_rikso")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(90, 2.137)
@@ -41,3 +42,6 @@ scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_rmrl6")
 
 [node name="Ui" parent="." instance=ExtResource("3_gs7pm")]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_ciie0")]
+position = Vector2(353, 34)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnm01ac5ujabo"]
+[gd_scene load_steps=9 format=3 uid="uid://cnm01ac5ujabo"]
 
 [ext_resource type="Script" uid="uid://dgjsy304bk2ed" path="res://Assets/Systems/Entity_Systems/Player.gd" id="1_to4ma"]
 [ext_resource type="Texture2D" uid="uid://ddlbsxipe0lbe" path="res://epic winner image.webp" id="2_mf0c4"]
 [ext_resource type="Script" uid="uid://c3tqtotaoh50e" path="res://Assets/World/Characters/main_camera.gd" id="2_vq4au"]
+[ext_resource type="Script" uid="uid://d1rfgsxehm842" path="res://Assets/World/Characters/attack_hitbox.gd" id="3_n1y4g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xerrp"]
 size = Vector2(8.6, 15.7)
@@ -24,6 +25,7 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_to4ma")
+hp = 10.0
 
 [node name="Player Hurtbox" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 3.5)
@@ -45,6 +47,7 @@ script = ExtResource("2_vq4au")
 
 [node name="Attack hitbox" type="RayCast2D" parent="."]
 target_position = Vector2(150, 0)
+script = ExtResource("3_n1y4g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Attack hitbox"]
 scale = Vector2(140, 5)
