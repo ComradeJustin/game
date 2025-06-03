@@ -11,6 +11,7 @@ func _ready() -> void:
 	self.dash_vel = 4
 	self.friction = 0
 	dash_count = [0,2]
+	attack_dmg = 2
 	pass # Replace with function body.
 
 
@@ -18,7 +19,12 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	rotate_attack()
 	if Input.is_action_just_pressed("Attack"):
-		attack()
+		var enemy = $"Attack hitbox".get_collider()
+		if enemy is Entitydata:
+			attack(enemy)
+			print(enemy)
+		else:
+			print("no target")
 	movement(delta)
 	
 	
@@ -48,10 +54,6 @@ func movement(delta:float):
 	acceleration_system()
 	move_and_slide()
 
-
-func attack():
-	attack_hitbox.check_enemy(attack_dmg)
-	print('attack')
 
 
 

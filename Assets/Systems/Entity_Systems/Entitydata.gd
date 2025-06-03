@@ -62,6 +62,10 @@ func check_death():
 	if self.hp <= 0:
 		self.queue_free()
 		
+func attack(target):
+	target.hp -= attack_dmg
+	print(target.hp)
+
 func damage(damage: float):
 	self.hp -= damage
 	check_death()

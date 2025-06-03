@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dce0pdo3qco0t"]
+[gd_scene load_steps=5 format=3 uid="uid://dce0pdo3qco0t"]
 
 [ext_resource type="Script" uid="uid://bv1267jl8jfqf" path="res://Standard_Enemy.gd" id="1_1e0jp"]
 [ext_resource type="Texture2D" uid="uid://bvnmno6r536ap" path="res://Assets/Sprites/Static_Sprites/Icons/icon.svg" id="2_4fpcv"]
@@ -7,10 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_evryi"]
 radius = 60.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4fpcv"]
-
 [node name="RigidBody2D" type="CharacterBody2D" groups=["Enemy"]]
-collision_layer = 0
+collision_layer = 3
 collision_mask = 0
 script = ExtResource("1_1e0jp")
 hp = 10.0
@@ -18,10 +16,11 @@ hp = 10.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_4fpcv")
 
+[node name="Alt Hurtbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_evryi")
+
 [node name="Hurtbox" parent="." instance=ExtResource("3_4fpcv")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_evryi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_4fpcv")

@@ -10,6 +10,7 @@ func _physics_process(delta: float) -> void:
 	_look_at(Player.getpos())
 	move(delta)
 	move_and_slide()
+	check_death()
 	
 	 
 func move(delta: float):
