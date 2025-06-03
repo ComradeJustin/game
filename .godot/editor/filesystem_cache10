@@ -1,0 +1,34 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1748989258
+enemy.gd::GDScript::4713882780834757518::1748388384::0::1::::<>Entitydata<><>0<>0<><>::
+enemy.tscn::PackedScene::9074057226359125839::1748388716::0::1::::<><><>0<>0<><>::uid://b8fo7wtdipyl7::::res://enemy.gd
+epic winner image.webp::CompressedTexture2D/CompressedTexture2D::7392630819654473146::1743547179::1743547180::1::::<><><>0<>0<>c072d09ed0641f3f39755a4ef57a3fe3<>res://.godot/imported/epic winner image.webp-de97ef51dfb5a942d6c80bfda8230ee1.ctex::
+README.md::TextFile/TextFile::-1::1743546666::0::1::::<><><>0<>0<><>::
+::res://Assets/::1743547805
+::res://Assets/debug_objects/::1743546666
+::res://Assets/debug_objects/test_objects/::1743546666
+test_platform.tscn::PackedScene/PackedScene::8510736426288034636::1743546666::0::1::::<><><>0<>0<><>::
+::res://Assets/debug_objects/test_scenes/::1748388716
+node_2d.tscn::PackedScene::1199128997152752033::1748388716::0::1::::<><><>0<>0<><>::uid://cnm01ac5ujabo::::res://Assets/World/Characters/player.tscn<>uid://dxunc0w0oq4dj::::res://Assets/Systems/Game_Systems/global_script.gd<>uid://b8p2xnc6lbpow::::res://scenes/Non_Game_Scenes/Ui.tscn<>uid://d2jsnqxd1rxud::::res://enemy.tscn
+pause screen.tscn::PackedScene::6662624678927548153::1748388716::0::1::::<><><>0<>0<><>::
+::res://Assets/Sprites/::1743546666
+::res://Assets/Sprites/Static_Sprites/::1743546666
+::res://Assets/Sprites/Static_Sprites/Icons/::1746572821
+Empty Heart.png::CompressedTexture2D/CompressedTexture2D::1133053467301313114::1746572796::1746572821::1::::<><><>0<>0<>f8e571fcb0fa31ddec0c82326716eee9<>res://.godot/imported/Empty Heart.png-ade5975da7f2b3eefabf965e36c0dc1b.ctex::
+Heart.png::CompressedTexture2D/CompressedTexture2D::1933015872824880880::1745970422::1745970494::1::::<><><>0<>0<>8401ae97e9ca09a35deb7c13aaa32106<>res://.godot/imported/Heart.png-99e44e7ed9d637cd3d7d47d799c414b3.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::3887975914157986987::1743546666::1743547806::1::::<><><>0<>0<>3376bf368d3668ad434c77240db114dc<>res://.godot/imported/icon.svg-157e7a3537b9f5d413eded4df613433a.ctex::
+::res://Assets/Systems/::1743546666
+::res://Assets/Systems/Entity_Systems/::1748387572
+Entitydata.gd::GDScript::3225096724734982448::1748388693::0::1::::Entitydata<>CharacterBody2D<><>0<>0<><>::
+Player.gd::GDScript::7600111788210851767::1748388713::0::1::::<>Entitydata<><>0<>0<><>::
+::res://Assets/Systems/Game_Systems/::1747174801
+global_script.gd::GDScript/GDScript::8815687250553724899::1747174801::0::1::::<>Node2D<><>0<>0<><>::
+title_screen.gd::GDScript/GDScript::6214034561342620274::1743546666::0::1::::<>Node2D<><>0<>0<><>::
+::res://Assets/World/::1743546666
+::res://Assets/World/Characters/::1748388716
+main_camera.gd::GDScript/GDScript::6778358333243906342::1744761193::0::1::::<>Camera2D<><>0<>0<><>::
+player.tscn::PackedScene::5711633227669781368::1748388716::0::1::::<><><>0<>0<><>::uid://dgjsy304bk2ed::::res://Assets/Systems/Entity_Systems/Player.gd<>uid://ddlbsxipe0lbe::::res://epic winner image.webp<>uid://c3tqtotaoh50e::::res://Assets/World/Characters/main_camera.gd
+::res://scenes/::1743546666
+::res://scenes/Non_Game_Scenes/::1748388716
+title_screen.tscn::PackedScene::7640879718049697874::1748388716::0::1::::<><><>0<>0<><>::uid://cuseig81aky7c::::res://Assets/Systems/Game_Systems/title_screen.gd
+Ui.tscn::PackedScene::4735299309439989190::1748388716::0::1::::<><><>0<>0<><>::uid://c16opqa5yprwr::::res://Assets/debug_objects/test_scenes/pause screen.tscn<>uid://2smqvj8mgsgm::::res://Assets/Sprites/Static_Sprites/Icons/Heart.png
